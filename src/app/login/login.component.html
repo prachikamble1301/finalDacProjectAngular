@@ -1,0 +1,33 @@
+
+<!-- <button (click)="switchLanguage('en')">English</button> -->
+
+<button type="button" class="btn btn-large btn-block btn-success" (click)="switchLanguage('en')" style="width: 80px;background-color: lightsalmon;">English</button>
+
+<button type="button" class="btn btn-large btn-block btn-info" (click)="switchLanguage('ge')" style="width: 80px; background-color: white;color:black;">German</button>
+
+<button type="button" class="btn btn-large btn-block btn-success" (click)="switchLanguage('hi')" style="width: 80px;">Marathi</button>
+
+<!-- <button (click)="switchLanguage('ge')">German</button> -->
+<!-- <button (click)="switchLanguage('hi')">Hindi</button> -->
+
+  <form #loginForm="ngForm" (ngSubmit)="login(loginForm)" role="form">
+    <div class="form-group">
+      <label for="exampleInputEmail1">{{ "email" | translate }}</label>
+      <input type="email" ngModel name="email" class="form-control" id="exampleInputEmail1" required="required" aria-describedby="emailHelp" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">{{ "password" | translate }}</label>
+      <input type="password" ngModel name="password" class="form-control" id="exampleInputPassword1" required="required" placeholder="Password">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Log In</button>
+    <b>.                                            .</b>
+    <a routerLink="/register"><button type="button" class="btn btn-primary" style="background-color: rgb(23, 139, 0);" >Register Here</button></a>
+  
+    <br>
+    <div style="text-align: left">
+      <a routerLink="/forgot" style="text-underline-position: below;color: red">Forgot Password</a>
+    </div>
+  </form>
+  

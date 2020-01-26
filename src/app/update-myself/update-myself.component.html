@@ -1,0 +1,93 @@
+
+
+ <div class="col-md-4"></div>
+ <div class="col-md-6" >
+
+<form #searchMyselfMyForm="ngForm" (ngSubmit)="searchMyself(searchMyselfMyForm)" role="form">
+  <legend>Search MySelf</legend>
+
+  <div class="form-group" style="width: 80%;">
+    <label for="exampleInputAadharNo1"> Enter Your AadharNo</label>
+    <input type="text" ngModel name="aadharNo" class="form-control" id="exampleInputAadharNo1" placeholder="AadharNo">
+  </div>
+
+  
+
+  <button type="submit" class="btn btn-primary" >Submit</button>
+</form>
+<br>
+<br>
+<div>
+ <h3> <b>{{message}}</b></h3>
+</div>
+<br>
+<br>
+
+
+
+<div class="form-group" style="width: 80%;">
+    <label for="regId">regId</label>
+    <input [(ngModel)]="details.regId" type="text" disabled="disabled" class="form-control" id="regId" name="regId">
+</div>
+
+<div class="form-group" style="width: 80%;">
+    <label for="name">Name</label>
+    <input  [(ngModel)]="details.name" type="text"  class="form-control" id="name" name="name">
+</div>
+
+<div class="form-group" style="width: 80%;">
+    <label for="surname">Surname</label>
+    <input  [(ngModel)]="details.surname" type="text"  class="form-control" id="surname" name="surname">
+</div>
+<div class="form-group" style="width: 80%;">
+  <label for="boD">Date of Birth</label>
+  <input  [(ngModel)]="details.boD" type="text"  class="form-control" id="boD" name="boD">
+</div>
+<div class="form-group" style="width: 80%;">
+  <label for="gender">Gender</label>
+  <input  [(ngModel)]="details.gender" type="text"  class="form-control" id="gender" name="gender">
+</div>
+
+<div class="form-group" style="width: 80%;">
+    <label for="email">Email</label>
+    <input  [(ngModel)]="details.user.email" type="text"  class="form-control" id="email" name="email">
+  </div>
+  <div class="form-group" style="width: 80%;">
+      <label for="mobile">Mobile No</label>
+      <input  [(ngModel)]="details.user.mobile" type="text"  class="form-control" id="mobile" name="mobile">
+    </div>
+<div class="form-group" style="width: 80%;">
+  <label for="aadharNo">AadharNo</label>
+  <input  [(ngModel)]="details.aadharNo" type="text"  class="form-control" id="aadharNo" name="aadharNo">
+</div>
+
+<div class="form-group" style="width: 80%;">
+  <label for="street">Street</label>
+  <input  [(ngModel)]="details.street" type="text"  class="form-control" id="street" name="street">
+</div>
+<div class="form-group" style="width: 80%;">
+  <label for="villege">Village</label>
+  <input  [(ngModel)]="details.villege" type="text"   class="form-control" id="villege" name="villege">
+</div>
+
+<div class="form-group" style="width: 80%;">
+  <label for="assmId">Assembly Name</label>
+  <input  [(ngModel)]="details.assmId.name" type="text"  disabled="disabled" class="form-control" id="assmId" name="assmId">
+</div>
+<div class="form-group" style="width: 80%;">
+    <label for="district">District</label>
+    <input  [(ngModel)]="details.assmId.distId.disName" type="text" disabled="disabled" class="form-control" id="district" name="district">
+  </div>
+  <div class="form-group" style="width: 80%;">
+      <label for="state">State</label>
+      <input  [(ngModel)]="details.assmId.distId.state.stateName" type="text" disabled="disabled" class="form-control" id="state" name="state">
+    </div>
+
+
+<div>
+  <button type="button" (click)="updateMyself()" class="btn btn-large btn-block btn-success" style=" width: 80%;">Update</button> 
+  
+  
+  </div>
+</div>
+

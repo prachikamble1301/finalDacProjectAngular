@@ -1,0 +1,24 @@
+
+
+<button type="button" (click)="getRegisteredUsers()" class="btn btn-secondary btn-lg btn-block" value="show my work" style="background-color:lightcyan;"> Show My Work</button>
+
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>regId</th><th>Name</th><th>Surname</th><th>AadharNo</th><th>Edit Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of data">
+      <td>{{user.regId}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.surname}}</td>
+        <td>{{user.aadharNo}}</td>
+        
+        <td><a routerLink="/edit/{{user.regId}}"><button type="button" class="btn btn-primary" style="background-color: rgb(23, 139, 0);" >Show Details</button></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,67 @@
+<form #voterRegistrationMyForm="ngForm" (ngSubmit)="voterRegistration(voterRegistrationMyForm)" role="form">
+  <div class="form-group">
+    <label for="exampleInputImage1">Image</label>
+    <input (change)="onSelect($event)" accept="image/*" class="form-control" style="padding-left: 20px;padding-top: 8px;" type="file" id="img" name=image >
+
+  </div>
+  
+  <div class="form-group">
+      <label for="exampleInputName1">Name</label>
+      <input type="text" ngModel name="name" class="form-control" id="exampleInputName1" aria-describedby="nameHelp" placeholder="Enter Name">
+
+    </div>
+    <div class="form-group">
+      <label for="exampleInputSurname1">Surname</label>
+      <input type="text" ngModel name="surname" class="form-control" id="exampleInputSurname1" placeholder="Surname">
+    </div>
+    <div class="form-group">
+        <label for="exampleInpuGender1">Gender</label>
+        <input type="radio" ngModel name="gender" value="male" checked>Male
+        <input type="radio" ngModel name="gender" value="Female" checked>FeMale
+
+      </div>
+
+ 
+        <div class="form-group"> <!-- Date input -->
+          <label class="control-label" for="date">Date</label>
+          <input class="form-control" id="boD" ngModel name="boD" placeholder="yy/mm/dd" type="date"/>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputStreet1">Street</label>
+            <input type="text" ngModel name="street" class="form-control" id="exampleInputStreet1" placeholder="Street">
+          </div>
+
+          <div class="form-group">
+              <label for="exampleInputVillege1">Village</label>
+              <input type="text" ngModel name="villege" class="form-control" id="exampleInputVillege1" placeholder="Villege">
+            </div>
+          
+            <h4>select Assembly</h4>
+<select  name="AssemblyConstituencyPOJO"  (change)="selectedAssembly($event)" placeholder="select assembly"  >
+    <ng-container *ngFor ="let data of assms"  >
+    <option ngModel name="assId" value="{{data.assId}}"  >{{data.name}}</option>
+  </ng-container>
+</select>
+           
+
+        <div class="form-group">
+          <label for="exampleInputAadharNo1">AadharNo</label>
+          <input type="text" ngModel name="aadharNo" class="form-control" id="exampleInputAadharNo1" placeholder="AadharNo">
+        </div>
+      
+      <button type="submit" class="btn btn-large btn-block btn-info" >Register</button>
+    
+      
+      
+   
+  </form>
+
+  
+
+
+
+
+
+  
+  

@@ -1,0 +1,13 @@
+/* body{
+<div class="text-center" style="color: darkred;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;margin-top: 5px;">
+  <img style="margin-left:200px ;opacity: 0.9;" src="assets/img/voterRegistration.jpeg" alt="Image" width=80% height=80% >  
+   </div>
+} */
+
+body
+{
+    padding-top: 5px;
+    background-color: black;
+    background-image: url("/app/img/registration.jpeg");
+    opacity: 0.9;
+}

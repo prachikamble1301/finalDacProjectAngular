@@ -1,0 +1,35 @@
+<ul class="nav navbar-nav" center style="background-color:navy;width: 100%;">
+    <li class="active">
+        <a routerLink="/home">Home</a>
+    </li>
+  
+    <li *ngIf="!isLogin">
+            <a routerLink="/login">Login</a>
+    </li>
+    <li>
+        <a routerLink="/register">Register</a>
+    </li>
+    <li >
+        <a routerLink="/about">About</a>
+    </li>
+    <li >
+        <a routerLink="/contact">Contact-Us</a>
+</li>
+
+    <li *ngIf="isLogin">
+            <a (click)="logout()">Logout</a>
+    </li>
+</ul>
+<div class="text-left" style=" color:black;font-family:fantasy, sans-serif, serif;margin-top: 7px;">
+    <img style="float: left;"src="assets/img/logo2.png" alt="Image" width=5% height=5%> <br>
+    <h3>                             </h3><br>
+    <h3>Election Commission of India</h3> 
+  <div></div>
+</div>
+
+
+<br>
+<br>
+<router-outlet>
+
+</router-outlet>
